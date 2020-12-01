@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+/* COL */
+$c100: 100%;
+$h100: 100%;
+
+/* COLOR */
+$ssafy: #E12304;
+
+/* FONT */
+$font-size__1: 1.875em; /*30px*/
+$font-size__2: 1.25em; /*20px*/
+$font-size__3: .813em; /*13px*/
+
+$f100: 100;
+$f200: 200;
+$f300: 300; 
+$f400: 400;
+$f500: 500;
+$f600: 600;
+$f700: 700;
+$f900: 900;
+
+@mixin bold {
+  font-weight: $f600;
+  transform: rotate(.1deg);
+}
+
+@mixin wrap {
+  width: 100%;
+  float: left;
+}
+
+/* GAP */
+@mixin div {
+  width: 100%;
+  float: left;
+  height: 1px;
+}
+
+/* img */
+@mixin background-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  word-wrap:normal;
+}
+
+@mixin ellipsisMulti($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+nav {
+  // background-color: #ff6666;
+  background-color: #ffe6e6;
+  height: 70px;
+}
+
+#header {
+  box-shadow: 0px 8px 15px grey;
+  font-family: 'Do Hyeon', sans-serif;
+  .logo + div{
+    margin-left: 10px;
+    margin-top: 1px;
+    font-weight: bold;
+    font-size: 38px;
+    float: left;
+  }
+
+  .logo{
+    width: 57px;
+    margin-left: 5px;
+    float: left;
+  }
+  
+  .login-btn, .join-btn, .mypage-btn, .temp-btn, .logout-btn, .user-btn , .search-btn, .category-btn{
+    margin-right: 30px;
+    margin-top: 0px;
+    font-size: 19px;
+    font-weight: bold;
+   /*  font-family: 'Do Hyeon', sans-serif; */
+   font-family: 'NEXON Lv1 Gothic OTF';
+  }
+  
+  .mypage-btn:hover, .temp-btn:hover,  .logout-btn:hover {
+    background-color: #ffb3b3;
+  }
+  .user-btn {
+    margin-top: 8px;
+    img{
+      margin-top: -4px;
+    }
+  }
+  .write-btn{
+    margin-right: 20px;
+  }
+
+  .user-btn + .logout-btn{
+    margin-left: -8px;
+  }
+  
+}
+
+
+#tag {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  .tag-list-wrap{
+    position: absolute;
+    width: 230px;
+    top: 230px;
+    z-index: 100;
+    left:calc(50% + 500px);
+    h4 {
+        font-size:1em;
+        padding-bottom:5px;
+        border-bottom:1px solid #000;
+        margin-bottom:20px;
+        font-weight:$f600;
+    }
+    ul.tag-list {
+        @include wrap;
+        text-align: left;
+        li {
+            cursor:pointer;
+            margin-bottom:15px;
+           
+        }
+    }
+  }
+  .list-group-item {
+    font-size: 18px;
+  }
+  h2{
+    // color: #ff4d4d;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Do Hyeon', sans-serif;
+    margin-top: -92px;
+  }
+  .badge{
+    background-color: #ff4d4d;
+    // font-size: 18px;
+    font-size: 15px;
+  }
+
+}
+
+#search {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  .input-group{
+    display: inline;
+  }
+  .selectpicker{
+    margin-left:-110px; 
+    float:left;
+    height: 49px;
+    width: 110px;
+    font-size: 18px;
+    border-color: #808080;
+    color: #404040;
+    padding-left: 5px;
+    // font-family: 'Do Hyeon', sans-serif;
+  }
+  input[type=text] {
+    width: 110%;
+    margin-left: 10px;
+    // font-family: 'Do Hyeon', sans-serif;
+    // font-size: 22px;
+    font-size: 20px;
+    height: 50px;
+    color: #404040;
+    background-position: 290px 10px; 
+    background-repeat: no-repeat;
+    border-color: #808080;
+    padding-top: 10px;
+    background-size: 25px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    padding: 12px 20px 12px 40px;
+    background-image: url('../../assets/img/search.png');
+  }
+  
+  // input[type=text]:focus {
+  //   width: 170%;
+  // }
+  display: inline-block;
+}

@@ -1,0 +1,561 @@
+@charset "utf-8";
+@import './common';
+
+.user {
+    height: 100vh;
+    h1 {
+        // font-size:$font-size__2;
+        text-align: center;
+        font-weight:$f600;
+        // margin-bottom:20px;
+    }
+    .wrapC {
+        width:500px;
+        margin:0 auto;
+    }
+    .input-wrap {
+        @include wrap;
+        margin-bottom:10px;
+        position: relative;
+        input {
+            @include wrap;
+            border:1px solid #000;
+            padding: 7px 15px;
+            box-sizing: border-box;
+        }
+        &.password-wrap {
+            input {
+                padding-right:30px;
+            }
+        }
+        span {
+            position:absolute;
+            right: 9px;
+            top: 11px;
+            opacity: .3;
+            &.active {
+                opacity: 1;
+            }
+        }
+        .error-text {
+            @include wrap;
+            margin-top:5px;
+        }
+    }
+
+    .btn {
+        // @include wrap;
+        border-radius: 0;
+        background-color: #000;
+        color:#fff
+    }
+}  
+
+// 로그인 페이지
+#login {
+    .sns-login {
+        @include wrap;
+        margin: 20px 0;
+        > div {
+            float: right;
+            margin-left: 10px;
+            img {
+                width: 55px;
+                height: 55px;
+                border-radius: 55px;
+            }
+        }   
+    }
+    .add-option {
+        @include wrap;
+        // p {
+        //     float:left;
+        //     color:#aaa;
+        // }
+        a {
+            float:right;
+            margin-top:2px;
+        }
+    }
+    h1{
+        // font-family: 'Short Stack', cursive;
+        font-family: 'Do Hyeon', sans-serif;
+        margin-left: 165px;
+        margin-top: 20px;
+        margin-bottom: 35px;
+        float: left;
+        font-size: 40px;
+    }
+    .btn--login{
+        font-family: 'NEXON Lv1 Gothic OTF';
+        background-color: #ff4d4d;
+        margin-top: 30px;
+        margin-left: 25px;
+        height: 50px;
+        width: 75%;
+        font-size: 15px;
+        font-weight: bold;   
+        border-color: black;
+        color: black; 
+    }
+    .btn--join {
+        font-family: 'NEXON Lv1 Gothic OTF';
+        height: 50px;
+        width: 75%;
+        margin-left: 25px;
+        background-color: white;
+        border-color: black;
+        color: black;
+        font-size: 15px;  font-weight: bold;  
+    }   
+    .btn--findpwd {
+        font-family: 'NEXON Lv1 Gothic OTF';
+       margin-left: 175px;
+       font-size: 13px;
+       margin-top: 30px;
+    }
+    .btn--join:hover{
+        background-color: #ff4d4d;
+    }
+    .add-option {
+        font-size: 15px;
+    }
+    #email, #password{
+        font-family: 'NEXON Lv1 Gothic OTF';
+        height: 50px;
+        width: 75%;
+        font-size: 13px;
+        margin-left: 25px;
+    }
+    p {
+        margin-bottom: 10px;
+        margin-right: 73px;
+        margin-top: 7px;
+        text-align: center;
+    }
+    // d9d9d9
+}
+
+#join {
+    .btn {
+        margin-top:20px;
+    }
+    .go-term {
+        opacity: .9;
+        cursor:pointer;
+        margin-left: 20px;
+    }
+    h1{
+        margin-bottom: 45px;
+        margin-left: 14px;
+        font-size: 45px;
+        font-weight: bold;
+        font-family: 'Do Hyeon', sans-serif;
+        // font-family: 'NEXON Lv1 Gothic OTF';
+    }
+    p{
+        font-family: 'NEXON Lv1 Gothic OTF';
+        font-size: 17px;
+        margin-left: 30px;
+        margin-top: 13px;
+    }
+    .input-wrap{
+        position: relative;
+    }
+    #email, #nickname{
+        font-family: 'NEXON Lv1 Gothic OTF';
+        width: 79%;
+        height: 50px;
+        font-size: 15px;
+        margin-bottom: 13px;
+    }
+    #email, #nickname{
+        margin-left: 90px;
+    }
+    #password {
+        font-family: 'NEXON Lv1 Gothic OTF';
+        width: 82%;
+        margin-left: 74px;
+        height: 50px;
+        font-size: 15px;
+        margin-bottom: 13px;
+    }
+    #passwordConfirm{
+        font-family: 'NEXON Lv1 Gothic OTF';
+        width: 91%;
+        margin-left: 34px;
+        height: 50px;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .wrap-checknumber{
+        font-family: 'NEXON Lv1 Gothic OTF';
+        margin-left: 38px;
+        margin-top: 10px;
+    }
+    .agree{
+        font-family: 'NEXON Lv1 Gothic OTF';
+        float: right;
+        font-size: 12px;
+    }
+    label > span {
+        font-family: 'NEXON Lv1 Gothic OTF';
+        padding-left: 7px;
+    }
+    .btn--checknumber{
+        font-weight: bold;
+        display: inline-block;
+        width: 25%;
+        margin-left: 38px;
+        font-size: 14px;
+        height: 50px;
+        background-color: #ff4d4d;
+        border-color: black;
+        color: black;
+        margin-top: 13px;
+        font-family: 'NEXON Lv1 Gothic OTF';
+    }
+    .btn-joinsubmit{
+        font-family: 'NEXON Lv1 Gothic OTF';
+        width: 97%;
+        height: 50px;
+        background-color: #ffe6e6;
+        font-size: 18px;
+        font-weight: bold;
+        border-color: black;
+        color: black;
+        margin-left: 18px;
+        margin-top: 40px;
+    }
+    .btn-joinsubmit:hover{
+        background-color: #ff4d4d;
+    }
+    #validNumber{
+        margin-top: 13px;
+        width: 55%;
+        font-size: 15px;
+        height: 50px;
+    }
+
+    #nickname:focus, #email:focus, #password:focus, #passwordConfirm:focus{
+        font-size: 13px;
+        transition: 0.3s;
+    }
+}
+
+#findPw{
+    h1{
+        font-family: 'Do Hyeon', sans-serif;
+        font-size: 37px;
+    }
+    .input-wrap{
+        width: 120%;
+        position: relative;
+        font-family: 'NEXON Lv1 Gothic OTF';
+    }
+    .form-wrap{
+        margin-top: 60px;
+    }
+    .row{
+        margin-top: 20px;
+    }
+    .row > p {
+        font-family: 'NEXON Lv1 Gothic OTF';
+        font-size: 17px;
+        margin-top: 8px;
+        margin-left: 70px;
+    }
+    .btn--checknumber{
+        font-family: 'NEXON Lv1 Gothic OTF';
+        display: inline-block;
+        width: 22%;
+        margin-left: 30px;
+        font-size: 14px;
+        height: 50px;
+        font-weight: bold;
+        background-color: #ff4d4d;
+        border-color: black;
+        color: black;
+    }
+    #validNumber{
+        width: 40%;
+        height: 50px;
+        font-size: 15px;
+        margin-left: 53px;
+    }
+    .btn--findpw{
+        font-family: 'NEXON Lv1 Gothic OTF';
+        // margin-left: 7px;
+        margin-top: 35px;
+        margin-left: 52px;
+        width: 81%;
+        font-weight: bold;
+        font-size: 18px;
+        height: 50px;
+        background-color: #ffe6e6;
+        border-color: black;
+        color: black;
+
+    }
+    .btn--findpw:hover{
+        background-color: #ff4d4d;
+    }
+    .wrap-sendnumber{
+        margin-top: 27px;
+    }
+    #nickname, #email{
+        // width: 130%;
+        width: 80%;
+        height: 50px;
+        font-size: 15px;
+        margin-left: 30px;
+    }
+
+}
+
+#information{
+    // height: 135vh;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    margin-top: 80px;
+    .profileImg{
+        float: left;
+        margin-top: 69px;
+        margin-left: 50px;
+        border-radius: 70%;
+        width: 140px;
+        height: 140px;
+    }
+    #profileImg, #basicImg {
+        border-radius: 60%;
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+    }
+    #btn-two{
+        margin-top: 2px;
+        margin-left: 50px;
+        width:20px; 
+        height:20px;
+    }
+    #add {
+        float: left;
+        margin-top: 15px;
+        width:18px; 
+        height:18px;
+    }
+    #remove{
+        float: left;
+        margin-top: -46px;
+        margin-left: 28px;
+        width:18px; 
+        height:18px;
+    }
+    .write_list,.like_list{
+        height: 47px;
+    }
+    .row{
+        margin-top: 20px;
+        margin-left: 240px;
+        font-size: 18px;
+        // font-family: 'Do Hyeon', sans-serif;
+        font-family: 'NEXON Lv1 Gothic OTF';
+    }
+    #nickname{
+        margin-top: 68px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    #email{
+        width: 80%;
+        background-color: white;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    #introduce{
+        width: 85%;
+        padding: 5px 10px 5px 10px;
+        font-size: 16px;
+        font-family: 'NEXON Lv1 Gothic OTF';
+    }
+    #nickname, #email, #introduce{
+        border: none;
+    }
+    #tablist{
+        margin-top: 100px;
+    }
+    .container{
+        margin-top: 30px;
+        margin-left: -60px;
+        margin-bottom: 100px;
+        width: 130%;
+        height: 350px;
+        box-shadow: 3px 3px 10px #cccccc;
+    }
+    .hashtag, .write, .like{
+        margin-left: 450px;
+        margin-top: 80px;
+        width: 20%;
+        height: 20%;
+        + p{
+            margin-top: 60px;
+            margin-left: 450px;
+            font-size: 20px;
+        }
+    }
+    p + p {
+        margin-left: 380px;
+        font-size: 20px;
+    }
+    .second{
+        margin-left: 337px;
+    }
+    .hash{
+        margin-left: 403px;
+    }
+    .btn-modify, .btn-remove {
+        border: none;
+        background-color: #ff6666;
+        font-family: 'NEXON Lv1 Gothic OTF';
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 50px;
+        padding-top: 8px;
+        padding-bottom: 5px;
+        width: 70px;
+        height: 40px;
+        float: right;
+    }
+    .btn-modify:hover{
+        background-color: #ff9999;
+    }
+    .btn-modify{
+        margin-right: 18px;
+    }
+    .btn-remove:hover{
+        background-color: #ff9999;
+    }
+    .btn-remove{
+        margin-right: 15px;
+    }
+    #GChart{
+        height: 400px;
+      }
+      #tablist{
+        width: 70%;
+        height: 400px;
+        margin: auto;
+        margin-top: 50px;
+      }
+}
+
+// 설정 페이지
+#setting {
+    > div {
+        margin-top:80px; 
+        h2 { 
+            margin-bottom: 40px;
+        }
+        h3 {
+            font-size: $font-size__2;
+            font-weight: $f600; 
+            border-bottom: 1px solid #000;
+            margin-bottom:35px;
+            padding-bottom: 5px;
+        }
+        .setting-form {
+            @include wrap;
+            margin-bottom:30px;
+            .left {
+                width:140px;
+                text-align: center;
+                .profile-img {
+                    @include background-img;
+                    width:140px;
+                    height:140px;
+                    border-radius: 140px;
+                    border:1px solid #000;
+                    margin-bottom:20px;
+                }
+                #profile-img {
+                    display: none;
+                }
+                .btn {
+                    margin-top:20px;
+                    padding:5px 15px;
+                    cursor:pointer;
+                }
+
+            }
+            .right {
+                width:570px;
+                label {
+                    font-weight: $f600;
+                    @include wrap;
+                    margin-bottom:10px;
+                }
+                .email, input, textarea {
+                    @include wrap;
+                    margin-bottom:20px;
+                    box-sizing: border-box;
+                }
+                input, textarea {
+                    border:1px solid #ccc;
+                    padding:15px 20px;
+                }
+            }
+        }
+        .btn-wrap {
+            @include wrap;
+            position: relative; 
+            .save-btn {
+                padding:15px 90px; 
+                display: block;
+                margin:0 auto;
+            }
+            .secession-btn {
+                position: absolute;
+                color:#666;
+                right:0;
+                top:15px;
+            }
+        }
+    }
+    
+}
+
+// 모달
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+    transition: opacity .3s ease;
+}
+.modal-container {
+    width: 32%;
+    height: 68%;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #ffe6e6;
+    border-radius: 0px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  .modal-container2 {
+    width: 35%;
+    height: 280px;
+    font-size: 21px;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+  }
